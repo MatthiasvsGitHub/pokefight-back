@@ -16,7 +16,10 @@ const pokemonRouting = require("./routes/pokemon");
 app.use("/pokemon/", pokemonRouting);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to our API :)')
+    res.send(`Welcome to our API :) <br/> <br/>
+    /pokemon                            -> List of all Pokemon <br/> <br/>
+    /pokemon/:id                        -> All the information of one Pokemon <br/> <br/>
+    /pokemon/:id/:(name/base/type)      -> Only that information of one Pokemon`)
 })
 
 
